@@ -30,7 +30,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     // List that holds a Map
     // a Map inside a List
-    var questions = [
+    // const questions = const []
+    const questions = [
       {
         'questionText': 'What\'s your favorite color?',
         'answers': ['black', 'red', 'green', 'white'],
