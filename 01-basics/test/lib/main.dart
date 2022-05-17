@@ -17,13 +17,33 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final questions = const [
+    {
+      'questionText': 'What\'s your favorite color?',
+      'answers': ['black', 'red', 'green', 'white'],
+    },
+    {
+      'questionText': 'What\'s your favorite animal?',
+      'answers': ['rabbit', 'snake', 'elephant', 'lion'],
+    },
+    {
+      'questionText': 'Who\'s your favorite instructor?',
+      'answers': ['max', 'max', 'max', 'max'],
+    },
+  ];
   var _questionIndex = 0;
 
   void _answerQuestion() {
+    // var aBool = true;
+    // aBool = false;
+
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
     print(_questionIndex);
+    if (_questionIndex < questions.length) {
+      print('We have more questions!');
+    }
   }
 
   @override
@@ -31,20 +51,7 @@ class _MyAppState extends State<MyApp> {
     // List that holds a Map
     // a Map inside a List
     // const questions = const []
-    const questions = [
-      {
-        'questionText': 'What\'s your favorite color?',
-        'answers': ['black', 'red', 'green', 'white'],
-      },
-      {
-        'questionText': 'What\'s your favorite animal?',
-        'answers': ['rabbit', 'snake', 'elephant', 'lion'],
-      },
-      {
-        'questionText': 'Who\'s your favorite instructor?',
-        'answers': ['max', 'max', 'max', 'max'],
-      },
-    ];
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -60,7 +67,7 @@ class _MyAppState extends State<MyApp> {
 
             // Anonymous func because we will use it just here
             ...(questions[_questionIndex]['answers'] as List<String>)
-              .map((answer) {
+                .map((answer) {
               return Answer(_answerQuestion, answer);
             }).toList() // Generates a new List
           ],
