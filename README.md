@@ -58,4 +58,10 @@ Android Studio: https://developer.android.com/studio/
 
 ### Folder 01: basics
 
-### Folder 02:
+### Folder 02: test
+
+### 1. Understanding Lists
+
+If you still want to learn more about lists right now, have a look at this article (Warning: This article contains a lot of information, we'll only dive into later in the course - hence it might be overwhelming right now): https://dart.dev/guides/language/language-tour#lists
+
+You can also check out the official API docs to get more information + a complete list (how meta!) of all default methods you can call on Dart lists: https://api.dartlang.org/stable/2.3.1/dart-core/List-class.html
