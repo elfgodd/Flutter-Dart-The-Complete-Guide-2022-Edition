@@ -30,6 +30,9 @@ class Person2 {
     // Make the args required, only in Flutter
     // Person2({@required String? inputName, @required int? age})
   }
+  Person2.veryOld(this.name) {
+    age = 100;
+  }
 }
 
 double addNumbers(double num1, double num2) {
@@ -62,4 +65,8 @@ void main() {
   // ...
   print(firstResult + 1);
   print('hello!');
+
+  var p3 = Person2.veryOld('Beto');
+  print(p3.name);
+  print(p3.age);
 }
