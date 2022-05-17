@@ -57,3 +57,5 @@ Android Studio: https://developer.android.com/studio/
 ## Section 2: Flutter Basics [QUIZ APP]
 
 ### Folder 01: basics
+
+### Folder 02:
