@@ -4,8 +4,9 @@ class Answer extends StatelessWidget {
   // _answerQuestion func pointer
   // it's stored in a variable func selectHandler
   final VoidCallback selectHandler;
+  final String answerText;
 
-  Answer(this.selectHandler);
+  Answer(this.selectHandler, String this.answerText);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class Answer extends StatelessWidget {
       child: RaisedButton(
           color: Colors.blue,
           textColor: Colors.white,
-          child: Text('Answer 1'),
+          child: Text(answerText),
           onPressed: selectHandler),
     );
   }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Question extends StatelessWidget {
   // const MyWidget({Key? key}) : super(key: key);
 
-  final String questionText;
+  var questionText;
 
   // Question constructor
   // This is the short form

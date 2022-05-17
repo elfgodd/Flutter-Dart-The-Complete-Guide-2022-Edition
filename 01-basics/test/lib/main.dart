@@ -28,22 +28,21 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    // Map
+    // List that holds a Map
+    // a Map inside a List
     var questions = [
       {
         'questionText': 'What\'s your favorite color?',
-        'answers': ['black' ,'red', 'green', 'white'],        
+        'answers': ['black', 'red', 'green', 'white'],
       },
       {
         'questionText': 'What\'s your favorite animal?',
-        'answers': ['rabbit' ,'snake', 'elephant', 'lion'],        
+        'answers': ['rabbit', 'snake', 'elephant', 'lion'],
       },
-       {
+      {
         'questionText': 'Who\'s your favorite instructor?',
-        'answers': ['max' ,'max', 'max', 'max'],        
-      }
-      ,
-      
+        'answers': ['max', 'max', 'max', 'max'],
+      },
     ];
     return MaterialApp(
       home: Scaffold(
@@ -52,13 +51,17 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-          Question(questions[_questionIndex]),
+            Question(questions[_questionIndex]['questionText']),
             // ElevatedButton() is the new RaisedButton
             // Passing a func _answerQuestion
             // to a Widget Answer
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
+            // Answer(_answerQuestion), // 3 times
+
+            // Anonymous func because we will use it just here
+            ...(questions[_questionIndex]['answers'] as List<String>)
+              .map((answer) {
+              return Answer(_answerQuestion, answer);
+            }).toList() // Generates a new List
           ],
         ),
       ),
