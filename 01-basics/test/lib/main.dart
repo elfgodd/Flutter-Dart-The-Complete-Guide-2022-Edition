@@ -59,7 +59,9 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(questions[_questionIndex]['questionText']),
+            Question(
+              questions[_questionIndex]['questionText'] as String // as String or !
+              ),
             // ElevatedButton() is the new RaisedButton
             // Passing a func _answerQuestion
             // to a Widget Answer
