@@ -65,3 +65,52 @@ Android Studio: https://developer.android.com/studio/
 If you still want to learn more about lists right now, have a look at this article (Warning: This article contains a lot of information, we'll only dive into later in the course - hence it might be overwhelming right now): https://dart.dev/guides/language/language-tour#lists
 
 You can also check out the official API docs to get more information + a complete list (how meta!) of all default methods you can call on Dart lists: https://api.dartlang.org/stable/2.3.1/dart-core/List-class.html
+
+### 2. "Old" Button Widgets vs "New" Button Widgets
+
+**Old Buttons** This buttons were changed in the newer versions of Flutter
+
+```
+RaisedButton  --> ElevatedButton
+FlatButton    --> TextButton
+OutlineButton --> OutlinedButton
+
+None of the new stuff supports: color, textColor, etc...
+```
+
+**New Buttons**
+
+```
+// Way number 1
+ElevatedButton(
+  style: ButtonStyle(
+  backgroundColor: MaterialStateProperty.all(Colors.orange),
+  foregroundColor: MaterialStatePropertu.all(Colors.white),
+  ),
+), // Button Style
+```
+
+```
+// Way number 2
+ElevatedButton(
+  style: ElevatedButton.styleForm(primary: Colors.orange, onPrimary: Colors.white
+  ),
+), // Button Style
+```
+
+```
+TextButton (
+  child: Text('A Flat Button'),
+  style: TextButton.styleForm(primary: Colors.orange
+  ),
+), // TextButton
+```
+
+```
+ElevatedButton(
+  style: OutlinedButton.styleForm(
+    primary: Colors.orange,
+    side: BorderSide(color: Colors.orange),
+  ),
+), // OutlinedButton
+```
