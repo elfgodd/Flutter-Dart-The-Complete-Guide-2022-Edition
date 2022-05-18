@@ -58,6 +58,8 @@ Android Studio: https://developer.android.com/studio/
 
 ### Folder 01: basics
 
+    01-basics, 02-quiz-app, 03-homework-app
+
 ### Folder 02: test
 
 ### 1. Understanding Lists
@@ -114,3 +116,31 @@ ElevatedButton(
   ),
 ), // OutlinedButton
 ```
+
+## Module Summary
+
+**Dart**
+
+- Object-oriented, strongly typed programming language
+- Everything's an object!
+- Types: String, num, int, double, List<...>
+- Variables, Functions, Properties, Methods
+- Constructor functions & shorthands
+
+**Types of Widgets**
+
+- Stateful & Stateless
+- Visible (Input / Output) and Invisible (Layout / Control)
+- Complex, with lots of config options (e.g. MaterialApp) and simpler (e.g. Text)
+
+**Widgets**
+
+- Your App's UI = Tree of Widgets
+- Flutter controls every pixel on the screen
+- Two types of Widgets: Stateless and Stateful Widgets
+- Widgets have build() methods which return a Widget
+
+**Styling & Positioning**
+
+- Styling and positioning is done via code (=> in the Widget tree)
+- Widgets can work together to achieve a certain look / structure
