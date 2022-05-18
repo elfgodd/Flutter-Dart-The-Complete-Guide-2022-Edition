@@ -4,6 +4,7 @@ class Question extends StatelessWidget {
   // const MyWidget({Key? key}) : super(key: key);
 
   var questionText;
+  // final String questionText;
 
   // Question constructor
   // This is the short form
@@ -18,6 +19,7 @@ class Question extends StatelessWidget {
       questionText,
       style: TextStyle(fontSize: 28),
       textAlign: TextAlign.center,
-    ),);
+    ),
+    );
   }
 }

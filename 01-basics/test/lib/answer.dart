@@ -6,7 +6,7 @@ class Answer extends StatelessWidget {
   final VoidCallback selectHandler;
   final String answerText;
 
-  Answer(this.selectHandler, String this.answerText);
+  Answer(this.selectHandler, this.answerText);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,8 @@ class Answer extends StatelessWidget {
           color: Colors.blue,
           textColor: Colors.white,
           child: Text(answerText),
-          onPressed: selectHandler),
+          onPressed: selectHandler,
+      ),
     );
   }
 }
