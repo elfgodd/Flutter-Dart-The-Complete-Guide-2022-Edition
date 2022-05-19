@@ -257,3 +257,12 @@ Container(
   ),
 ),
 ```
+
+### 3. Container VS Column / Row
+
+| Container                                               | Column / Row                                              |
+| ------------------------------------------------------- | --------------------------------------------------------- |
+| Takes exactly one child widget                          | Takes multiple (unlimited) child widgets                  |
+| Rich alignment & styling options                        | Alignment but not styling options                         |
+| Flexible width (e.g. child width, available width, ...) | always takes full available height (column) / width (row) |
+| Perfect for custom styling & alignment                  | Must-use if widgets sit next to / above each other        |
