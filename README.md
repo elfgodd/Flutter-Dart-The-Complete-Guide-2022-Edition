@@ -277,4 +277,5 @@ https://pub.dev/packages/intl
 Documentation for this package:  
 https://pub.dev/documentation/intl/latest/
 
-`DateFormat('yyyy-MM-dd').format(tx.date), `DateFormat('yyyy/MM/dd').format(tx.date),
+`DateFormat('yyyy-MM-dd').format(tx.date),`  
+`DateFormat('yyyy/MM/dd').format(tx.date),`
