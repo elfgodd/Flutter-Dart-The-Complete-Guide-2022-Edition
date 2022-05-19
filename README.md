@@ -266,3 +266,15 @@ Container(
 | Rich alignment & styling options                        | Alignment but not styling options                         |
 | Flexible width (e.g. child width, available width, ...) | always takes full available height (column) / width (row) |
 | Perfect for custom styling & alignment                  | Must-use if widgets sit next to / above each other        |
+
+### 4. Installing External Packages & Formatting Dates
+
+DateFormat class:  
+https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html
+
+Package for formatting Dates:  
+https://pub.dev/packages/intl  
+Documentation for this package:  
+https://pub.dev/documentation/intl/latest/
+
+`DateFormat('yyyy-MM-dd').format(tx.date), `DateFormat('yyyy/MM/dd').format(tx.date),
