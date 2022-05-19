@@ -58,9 +58,7 @@ Android Studio: https://developer.android.com/studio/
 
 ### Folder 01: basics
 
-    01-basics, 02-quiz-app, 03-homework-app
-
-### Folder 02: test
+    01-quiz-app, 02-homework-app
 
 ### 1. Understanding Lists
 
@@ -117,7 +115,7 @@ ElevatedButton(
 ), // OutlinedButton
 ```
 
-## Module Summary
+### 3. Module Summary
 
 **Dart**
 
@@ -144,3 +142,46 @@ ElevatedButton(
 
 - Styling and positioning is done via code (=> in the Widget tree)
 - Widgets can work together to achieve a certain look / structure
+
+### 4. Module Resources
+
+the following resources might be helpful:
+
+Official Docs: https://flutter.dev/docs
+
+Widget Catalog: https://flutter.dev/docs/development/ui/widgets
+
+Dart Docs: https://dart.dev/guides/language/language-tour
+
+"Introduction to Widgets" - Official Docs:  
+https://flutter.dev/docs/development/ui/widgets-intro
+
+## Section 3: Running Apps on Different Devices & Debugging Apps
+
+### Folder 02: debugging
+
+**info:**
+
+- Running the App on Different Platforms & Real Devices
+- Reading & Understanding Error Messages
+- Using the (VS Code) Debugger
+- Using the Dart DevTools & The Flutter Inspector
+
+### 1. Useful Resources & Links
+
+Official Debugging Docs: https://flutter.dev/docs/testing/debugging
+
+Dart Dev Tools: https://flutter.github.io/devtools/
+
+## Section 4: Widgets, Styling, Adding Logic - Building a Real App [PERSONAL EXPENSES APP]
+
+### Folder 03:
+
+**info:**
+
+- Widgets, Widgets, Widgets
+- Theming & Material Design
+- Working with Images & Fonts
+- Adding Business Logics to an App
+
+### 1.
