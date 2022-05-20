@@ -290,3 +290,9 @@ https://pub.dev/documentation/intl/latest/
 - ListView.builder():
   - Renders only the widgets that are visible
   - Use this for long list
+
+### 6. Further Input & Output Styling and Configuration
+
+**This makes the device open the keyboard with numbers**
+`On Android: TextField(keyboardType: TextInputType.number)`  
+`On iOS: TextField(keyboardType: TextInputType.numberWithOptions(decimal: true))`
