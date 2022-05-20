@@ -279,3 +279,14 @@ https://pub.dev/documentation/intl/latest/
 
 `DateFormat('yyyy-MM-dd').format(tx.date),`  
 `DateFormat('yyyy/MM/dd').format(tx.date),`
+
+### 5. Working with ListViews
+
+**ListView**:
+
+- ListView(children: []):
+  - Renders all the widgets, even if they are offscreen
+  - Use this for short list
+- ListView.builder():
+  - Renders only the widgets that are visible
+  - Use this for long list
