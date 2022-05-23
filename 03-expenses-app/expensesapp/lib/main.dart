@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './widgets/chart.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import './models/transaction.dart';
@@ -16,9 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Quicksand',
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.purple,
-        ).copyWith(
-          secondary: Colors.amber
-          ),
+        ).copyWith(secondary: Colors.amber),
         textTheme: const TextTheme(
           headline6: TextStyle(
             fontFamily: 'OpenSans',
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: MyHomePage(), 
+      home: MyHomePage(),
     );
   }
 }
@@ -46,19 +45,29 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [
-  //   Transaction(
-  //     id: 't1',
-  //     title: 'New Shoes',
-  //     amount: 69.99,
-  //     date: DateTime.now(),
-  //   ),
-  //   Transaction(
-  //     id: 't2',
-  //     title: 'Weekly Groceries',
-  //     amount: 16.53,
-  //     date: DateTime.now(),
-  //   ),
+    //   Transaction(
+    //     id: 't1',
+    //     title: 'New Shoes',
+    //     amount: 69.99,
+    //     date: DateTime.now(),
+    //   ),
+    //   Transaction(
+    //     id: 't2',
+    //     title: 'Weekly Groceries',
+    //     amount: 16.53,
+    //     date: DateTime.now(),
+    //   ),
   ];
+
+  List<Transaction> get _recentTranstactions {
+    return _userTransactions.where((tx) {
+      return tx.date.isAfter(
+        DateTime.now().subtract(
+          Duration(days: 7),
+        ),
+      );
+    }).toList();
+  }
 
   void _addNewTransaction(String txTitle, double txAmount) {
     final newTx = Transaction(
@@ -100,14 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              width: double.infinity,
-              child: Card(
-                color: Colors.blue,
-                child: Text('CHART'),
-                elevation: 5,
-              ),
-            ),
+            Chart(_recentTranstactions),
             TransactionList(_userTransactions),
           ],
         ),
