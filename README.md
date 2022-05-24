@@ -296,3 +296,7 @@ https://pub.dev/documentation/intl/latest/
 **This makes the device open the keyboard with numbers**
 `On Android: TextField(keyboardType: TextInputType.number)`  
 `On iOS: TextField(keyboardType: TextInputType.numberWithOptions(decimal: true))`
+
+### 7. Floating Point Math
+
+https://0.30000000000000004.com/

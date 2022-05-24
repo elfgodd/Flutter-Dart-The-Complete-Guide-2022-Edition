@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:intl/intl.dart';
 class NewTransaction extends StatefulWidget {
   final Function addTx;
 
@@ -58,9 +57,28 @@ class _NewTransactionState extends State<NewTransaction> {
               onSubmitted: (_) => submitData(),
               // onChanged: (value) => amountInput = value,
             ),
-            FlatButton(
+            Container(
+              height: 70,
+              child: Row(
+                children: <Widget>[
+                  Text('No Date Chosen!'),
+                  FlatButton(
+                    textColor: Theme.of(context).primaryColor,
+                    child: Text(
+                      'Choose Date',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      )
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ),
+            RaisedButton(
               child: Text('Add Transaction'),
-              textColor: Colors.purple,
+              color: Theme.of(context).primaryColor,
+              textColor: Theme.of(context).textTheme.button!.color,
               onPressed: submitData,
               // RF title is String but amount is a double
               // We need logic here so users won't type Strings like Hello in the amount

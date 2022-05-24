@@ -14,24 +14,27 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Personal Expenses',
       theme: ThemeData(
-        fontFamily: 'Quicksand',
-        colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.purple,
-        ).copyWith(secondary: Colors.amber),
-        textTheme: const TextTheme(
-          headline6: TextStyle(
-            fontFamily: 'OpenSans',
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
+          accentColor: Colors.amber,
+          fontFamily: 'Quicksand',
+          // textTheme: ThemeData.light().textTheme.copyWith(
+           textTheme: const TextTheme(
+            headline6: TextStyle(
+              fontFamily: 'OpenSans',
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
+            button: TextStyle(
+              color: Colors.white
+            ),
         ),
-        appBarTheme: const AppBarTheme(
-          titleTextStyle: TextStyle(
-            fontFamily: 'OpenSans',
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+          appBarTheme: const AppBarTheme(
+            titleTextStyle: TextStyle(
+              fontFamily: 'OpenSans',
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
       ),
       home: MyHomePage(),
     );
