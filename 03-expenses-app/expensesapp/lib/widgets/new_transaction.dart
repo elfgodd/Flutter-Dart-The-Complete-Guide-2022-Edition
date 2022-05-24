@@ -17,16 +17,31 @@ class _NewTransactionState extends State<NewTransaction> {
 
 
   void _submitData() {
+    if(_amountController.text.isEmpty) {
+      return;
+    }
     final enteredTitle = _titleController.text;
     final enteredAmount = double.parse(_amountController.text);
 
-    if (enteredTitle.isEmpty || enteredAmount <= 0) {
+    if (enteredTitle.isEmpty || enteredAmount <= 0 || _selectedDate == null) {
+      return;
+    }
+
+    if (enteredTitle.isEmpty
+        || enteredAmount <= 0
+        || _selectedDate == null
+       ) {
       // This will stop the function execution
       // addTx will not reach
       return;
     }
 
-    widget.addTx(enteredTitle, enteredAmount);
+    widget.addTx(
+      enteredTitle,
+      enteredAmount,
+      _selectedDate,
+      
+    );
     // This closes the modal after entering the data + enter
     Navigator.of(context).pop();
   }
