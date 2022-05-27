@@ -59,6 +59,7 @@ class ChartBar extends StatelessWidget {
         ),
       ],
      );
-    },); 
+    },
+    ); 
   }
 }

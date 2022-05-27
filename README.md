@@ -322,3 +322,17 @@ https://0.30000000000000004.com/
 
     Text('This changes!', style: TextStyle(fontSize: 20 \* curScaleFactor));
     This text on the other hand also has a size of 20 if the user didn't change anything in the settings (because textScaleFactor by default is 1). But if changes were made, the font size of this text respects the user settings.
+
+### 2. Controlling the Device Orientation
+
+```
+void main() {
+  // Adjusting App for Landscape Orientation
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  //   DeviceOrientation.portraitDown,
+  // ]);
+  runApp(MyApp());
+}
+```
