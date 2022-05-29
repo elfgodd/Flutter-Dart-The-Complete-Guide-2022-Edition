@@ -93,7 +93,7 @@ class _NewTransactionState extends State<NewTransaction> {
                 // }),
               ),
               TextField(
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Amount',
                 ),
                 controller: _amountController,

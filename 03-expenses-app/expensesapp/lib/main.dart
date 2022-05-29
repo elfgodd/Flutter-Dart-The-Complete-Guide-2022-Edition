@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// This import is for SystemChrome
+// import 'package:flutter/services.dart';
 
 import './widgets/chart.dart';
 import './widgets/new_transaction.dart';
@@ -82,7 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _addNewTransaction(
-      String txTitle, double txAmount, DateTime chosenDate) {
+      String txTitle,
+      double txAmount,
+      DateTime chosenDate) {
     final newTx = Transaction(
       title: txTitle,
       amount: txAmount,
@@ -158,18 +161,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         appBar.preferredSize.height -
                         MediaQuery.of(context).padding.top) *
                       0.3,
-                child: Chart(_recentTransactions),
-              ),
-              if(!isLandscape) txListWidget,
-              if(isLandscape) _showChart
-                ? Container(
-                    height: (MediaQuery.of(context).size.height -
-                            appBar.preferredSize.height -
-                            MediaQuery.of(context).padding.top) *
-                        0.7,
-                    child: Chart(_recentTransactions),
+                  child: Chart(_recentTransactions),
+                ),
+            if(!isLandscape) txListWidget,
+            if(isLandscape) _showChart
+              ? Container(
+                height: (MediaQuery.of(context).size.height -
+                        appBar.preferredSize.height -
+                        MediaQuery.of(context).padding.top) *
+                      0.7,
+                  child: Chart(_recentTransactions),
                 )
-                : txListWidget
+              : txListWidget
           ],
         ),
       ),
