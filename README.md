@@ -336,3 +336,8 @@ void main() {
   runApp(MyApp());
 }
 ```
+
+### 3. Respecting the Softkeyboard Insets
+
+How to Move bottomsheet along with keyboard which has textfield(autofocused is true)?:  
+https://stackoverflow.com/questions/53869078/how-to-move-bottomsheet-along-with-keyboard-which-has-textfieldautofocused-is-t/57515977#57515977
