@@ -17,7 +17,7 @@ class _NewTransactionState extends State<NewTransaction> {
 
 
   void _submitData() {
-    if(_amountController.text.isEmpty) {
+    if (_amountController.text.isEmpty) {
       return;
     }
     final enteredTitle = _titleController.text;
@@ -106,18 +106,21 @@ class _NewTransactionState extends State<NewTransaction> {
                 child: Row(
                   children: <Widget>[
                     Expanded(
-                      child: Text(_selectedDate == null
-                        ? 'No date chosen'
-                        : 'Picked Date: ${DateFormat.yMd().format(_selectedDate!)}',
+                      child: Text(
+                        _selectedDate == null
+                          ? 'No date chosen'
+                          : 'Picked Date: ${DateFormat.yMd().format(_selectedDate!)}',
                         // : 'Picked Date: ${DateFormat.yMd().format(_selectedDate)}',
                       ),
                     ),
                     FlatButton(
                       textColor: Theme.of(context).primaryColor,
-                      child: Text('Choose Date',
+                      child: Text(
+                        'Choose Date',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                          )),
+                          ),
+                        ),
                       onPressed: _presentDatePicker,
                     ),
                   ],
