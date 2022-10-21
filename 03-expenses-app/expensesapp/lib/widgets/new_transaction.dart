@@ -15,22 +15,14 @@ class _NewTransactionState extends State<NewTransaction> {
   final _amountController = TextEditingController();
   DateTime? _selectedDate;
 
-
   void _submitData() {
-    if(_amountController.text.isEmpty) {
+    if (_amountController.text.isEmpty) {
       return;
     }
     final enteredTitle = _titleController.text;
     final enteredAmount = double.parse(_amountController.text);
 
     if (enteredTitle.isEmpty || enteredAmount <= 0 || _selectedDate == null) {
-      return;
-    }
-
-    if (enteredTitle.isEmpty
-        || enteredAmount <= 0
-        || _selectedDate == null
-       ) {
       // This will stop the function execution
       // addTx will not reach
       return;
@@ -40,7 +32,6 @@ class _NewTransactionState extends State<NewTransaction> {
       enteredTitle,
       enteredAmount,
       _selectedDate,
-      
     );
     // This closes the modal after entering the data + enter
     Navigator.of(context).pop();
@@ -59,11 +50,10 @@ class _NewTransactionState extends State<NewTransaction> {
       if (pickedDate == null) {
         return;
       }
-      
+
       setState(() {
         _selectedDate = pickedDate;
       });
-
     });
   }
 
@@ -100,14 +90,19 @@ class _NewTransactionState extends State<NewTransaction> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    child: Text(_selectedDate == null
-                      ? 'No date chosen'
-                      : 'Picked Date: ${DateFormat.yMd().format(_selectedDate!)}',
+                    child: Text(
+                      _selectedDate == null
+                          ? 'No date chosen'
+                          : 'Picked Date: ${DateFormat.yMd().format(_selectedDate!)}',
                       // : 'Picked Date: ${DateFormat.yMd().format(_selectedDate)}',
                     ),
                   ),
-                  FlatButton(
-                    textColor: Theme.of(context).primaryColor,
+                  // FlatButton(
+                  TextButton(
+                    // textColor: Theme.of(context).primaryColor,
+                    style: TextButton.styleFrom(
+                      primary: Colors.blue,
+                    ),
                     child: Text('Choose Date',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -117,10 +112,15 @@ class _NewTransactionState extends State<NewTransaction> {
                 ],
               ),
             ),
-            RaisedButton(
+            // RaisedButton(
+            ElevatedButton(
               child: Text('Add Transaction'),
-              color: Theme.of(context).primaryColor,
-              textColor: Theme.of(context).textTheme.button!.color,
+              // color: Theme.of(context).primaryColor,
+              // textColor: Theme.of(context).textTheme.button!.color,
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red, // background
+                onPrimary: Colors.white, // foreground
+              ),
               onPressed: _submitData,
               // RF title is String but amount is a double
               // We need logic here so users won't type Strings like Hello in the amount

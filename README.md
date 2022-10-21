@@ -300,3 +300,21 @@ https://pub.dev/documentation/intl/latest/
 ### 7. Floating Point Math
 
 https://0.30000000000000004.com/
+
+### 8. Useful Resources & Links
+
+resources might be helpful:
+
+More on Layouting (with Column(), Row() etc.): https://flutter.dev/docs/development/ui/layout
+
+More on Images & Assets: https://flutter.dev/docs/development/ui/assets-and-images
+
+Official Widget Catalog: https://flutter.dev/docs/development/ui/widgets
+
+Material Design Docs: https://material.io/design/
+
+Flutter Theming: https://flutter.dev/docs/cookbook/design/themes
+
+ListTile class Null safety:  
+A single fixed-height row that typically contains some text as well as a leading or trailing icon.  
+https://api.flutter.dev/flutter/material/ListTile-class.html

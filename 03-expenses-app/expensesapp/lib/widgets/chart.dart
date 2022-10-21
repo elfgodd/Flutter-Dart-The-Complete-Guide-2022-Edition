@@ -53,8 +53,8 @@ class Chart extends StatelessWidget {
                 (data['day'] as String),
                 (data['amount'] as double),
                 totalSpending == 0.0
-                ? 0.0
-                : (data['amount'] as double) / totalSpending,
+                    ? 0.0
+                    : (data['amount'] as double) / totalSpending,
               ),
             );
           }).toList(),
