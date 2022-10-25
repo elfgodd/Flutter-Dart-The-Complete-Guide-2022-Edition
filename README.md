@@ -318,3 +318,7 @@ Flutter Theming: https://flutter.dev/docs/cookbook/design/themes
 ListTile class Null safety:  
 A single fixed-height row that typically contains some text as well as a leading or trailing icon.  
 https://api.flutter.dev/flutter/material/ListTile-class.html
+
+## Section 5: Responsive & Adaptive User Interfaces and Apps
+
+### Folder 03: expenses-app
