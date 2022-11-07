@@ -36,6 +36,11 @@ Course Repository:
 - Flutter 2 Update
 - Roundup
 
+## Resources:
+
+- https://docs.flutter.dev/development/ui/widgets
+- https://flutterbyexample.com/lesson/dynamic
+
 ## Section 1: Introduction
 
 ### 1. Useful Resources & Links
@@ -322,3 +327,64 @@ https://api.flutter.dev/flutter/material/ListTile-class.html
 ## Section 5: Responsive & Adaptive User Interfaces and Apps
 
 ### Folder 03: expenses-app
+
+#### 1. Some buttons are replaced by new types. Here is the fix:
+
+IY: Some buttons are replaced by new types
+
+FlatButton => TextButton,
+
+RaisedButton => ElevatedButton,
+
+OutlineButton => OutlinedButton
+
+https://docs.flutter.dev/release/breaking-changes/buttons
+
+https://docs.google.com/document/d/1yohSuYrvyya5V1hB6j9pJskavCdVq9sVeTqSoEPsWH0/edit#
+
+Here is the updated code:
+
+Was:
+
+```
+RaisedButton(
+  child: Text('Add Transaction'),
+  color: Theme.of(context).primaryColor,
+  textColor: Theme.of(context).textTheme.button.color,
+  onPressed: _submitData,
+)
+```
+
+New:
+
+```
+ElevatedButton(
+  child: Text('Add Transaction'),
+  style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(Theme.of(context).textTheme.button.color),
+    backgroundColor: MaterialStateProperty.all<Color>(Theme.of(context).primaryColor),
+  ),
+)
+```
+
+Was:
+
+```
+TextButton.icon(
+    icon: Icon(Icons.delete),
+    label: Text('Delete'),
+    textColor: Theme.of(context).errorColor,
+    onPressed: () => deleteTx(transactions[index].id),
+  )
+```
+
+New:
+
+```
+TextButton.icon(
+    icon: Icon(Icons.delete),
+    label: Text('Delete'),
+    style: ButtonStyle(foregroundColor: MaterialStateProperty.all<Color>(Theme.of(context).errorColor)),
+    onPressed: () => deleteTx(transactions[index].id),
+  )
+```
