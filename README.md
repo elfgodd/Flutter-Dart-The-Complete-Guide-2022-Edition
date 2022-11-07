@@ -40,6 +40,7 @@ Course Repository:
 
 - https://docs.flutter.dev/development/ui/widgets
 - https://flutterbyexample.com/lesson/dynamic
+- unique id generation: https://pub.dev/packages/uuid
 
 ## Section 1: Introduction
 
@@ -388,3 +389,16 @@ TextButton.icon(
     onPressed: () => deleteTx(transactions[index].id),
   )
 ```
+
+## section6 Useful Resources & Links
+
+- Official Flutter Widget Intro + Deep Dive:
+- Part 1 (Stateless Widgets): https://www.youtube.com/watch?v=wE7khGHVkYY
+- Part 2 (Stateful Widgets, Widget Tree, Element Tree): https://www.youtube.com/watch?=AqCMFXEmf3w
+- Part 3 (Inherited Widget/ Context): https://www.youtube.com/watch?v=Zbm3hjPjQMk
+- Part 4 (Keys): https://www.youtube.com/watch?v=kn0EOS-ZiIc
+- App Lifecycle: https://medium.com/pharos-production/flutter-app-lifecycle-4b0ab4a4211a
+
+## Section 1: Navigation & Multiple Screens [MEALS APP]
+
+### 1. Useful Resources & Links
